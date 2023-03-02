@@ -1,10 +1,16 @@
 function returnsThree() {
-  // Your code here
+  return 3;
 }
 
 function reciprocal(n) {
-  // Your code here
+  if (n > 1000000 || n < 1) {
+    throw new Error("out of bounds");
+  }
+
+  return 1 / n;
 }
+
+
 
 module.exports = {
   returnsThree,
