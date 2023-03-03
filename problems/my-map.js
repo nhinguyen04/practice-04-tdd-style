@@ -1,5 +1,19 @@
 function myMap(inputArray, callback) {
-  // Your code here
+  let resultArray = [];
+
+  inputArray.forEach((ele) => {
+    resultArray.push(callback(ele));
+  })
+
+  return resultArray;
 }
 
-module.exports = myMap;
+const array = [1, 2, 3];
+
+console.log(myMap(array, (ele) => ele * 2));
+
+
+//-----
+module.exports = {
+  myMap,
+};
